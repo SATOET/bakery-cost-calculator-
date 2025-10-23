@@ -209,6 +209,33 @@ FastAPIの自動生成ドキュメントが利用可能です:
 
 このプロジェクトはMITライセンスの下で公開されています。
 
+## 共同開発
+
+このプロジェクトに貢献したい方は、以下のガイドを参照してください：
+
+- **[開発ガイド (CONTRIBUTING.md)](CONTRIBUTING.md)** - コーディング規約、開発ワークフロー
+- **[共同開発セットアップ (COLLABORATION_SETUP.md)](COLLABORATION_SETUP.md)** - コラボレーター追加、チーム開発の手順
+
+### クイックスタート（開発者向け）
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/SATOET/bakery-cost-calculator-.git
+cd bakery-cost-calculator-
+
+# 環境構築
+python -m venv venv
+source venv/bin/activate  # Windowsの場合: venv\Scripts\activate
+pip install -r requirements.txt
+pip install "pydantic[email]"
+
+# 環境設定
+cp .env.example .env
+
+# 起動
+python -m uvicorn app.main:app --reload
+```
+
 ## サポート
 
-問題が発生した場合や機能要望がある場合は、Issueを作成してください。
+問題が発生した場合や機能要望がある場合は、[GitHub Issues](https://github.com/SATOET/bakery-cost-calculator-/issues)を作成してください。

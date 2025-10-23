@@ -13,7 +13,13 @@
       "Bash(curl:*)",
       "Bash(git init:*)",
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Bakery Cost Calculator\n\nパン屋向け原価計算・ラベル印刷システムの初期実装\n\n機能:\n- ユーザー認証 (JWT, bcrypt)\n- 材料管理 (自動単価計算)\n- レシピ管理 (材料費自動計算)\n- 固定費管理\n- 商品・原価計算 (利益率計算)\n- ラベル印刷 (PDF生成)\n\n技術スタック:\n- FastAPI (Python)\n- SQLite / PostgreSQL対応\n- ReportLab (PDF生成)\n- JWT認証\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
