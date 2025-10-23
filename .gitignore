@@ -34,7 +34,7 @@ ENV/
 .env
 
 # IDE
-.vscode/
+# .vscode/ は共有設定として含める
 .idea/
 *.swp
 *.swo
