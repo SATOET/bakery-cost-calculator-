@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Cost Calculator - パン屋向け原価計算システム</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bakery Cost Calculator</h1>
+            <p>パン屋向け原価計算・ラベル印刷システム</p>
+        </header>
+
+        <div id="auth-section" class="section">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">ログイン</button>
+                    <button class="tab-btn" data-tab="register">新規登録</button>
+                </div>
+
+                <div id="login-form" class="auth-form active">
+                    <h2>ログイン</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="login-email">メールアドレス</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">パスワード</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ログイン</button>
+                    </form>
+                    <a href="#" id="forgot-password-link">パスワードをお忘れの方</a>
+                </div>
+
+                <div id="register-form" class="auth-form">
+                    <h2>新規登録</h2>
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="register-store-id">店舗ID</label>
+                            <input type="text" id="register-store-id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-store-name">店舗名</label>
+                            <input type="text" id="register-store-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">メールアドレス</label>
+                            <input type="email" id="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">パスワード (8文字以上)</label>
+                            <input type="password" id="register-password" required minlength="8">
+                        </div>
+                        <button type="submit" class="btn btn-primary">登録</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="app-section" class="section" style="display: none;">
+            <nav class="main-nav">
+                <div class="user-info">
+                    <span id="store-name-display"></span>
+                    <button id="logout-btn" class="btn btn-secondary">ログアウト</button>
+                </div>
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-section="materials">材料管理</button>
+                    <button class="nav-tab" data-section="recipes">レシピ管理</button>
+                    <button class="nav-tab" data-section="fixed-costs">固定費管理</button>
+                    <button class="nav-tab" data-section="products">商品・原価計算</button>
+                    <button class="nav-tab" data-section="labels">ラベル印刷</button>
+                </div>
+            </nav>
+
+            <main id="main-content">
+                <div id="materials-section" class="content-section active">
+                    <h2>材料管理</h2>
+                    <button class="btn btn-primary" id="add-material-btn">新規材料追加</button>
+                    <div id="materials-list" class="data-list"></div>
+                </div>
+
+                <div id="recipes-section" class="content-section">
+                    <h2>レシピ管理</h2>
+                    <button class="btn btn-primary" id="add-recipe-btn">新規レシピ追加</button>
+                    <div id="recipes-list" class="data-list"></div>
+                </div>
+
+                <div id="fixed-costs-section" class="content-section">
+                    <h2>固定費管理</h2>
+                    <button class="btn btn-primary" id="add-fixed-cost-btn">固定費項目追加</button>
+                    <div id="fixed-costs-summary" class="summary-box"></div>
+                    <div id="fixed-costs-list" class="data-list"></div>
+                </div>
+
+                <div id="products-section" class="content-section">
+                    <h2>商品・原価計算</h2>
+                    <button class="btn btn-primary" id="add-product-btn">新規商品追加</button>
+                    <div id="products-list" class="data-list"></div>
+                </div>
+
+                <div id="labels-section" class="content-section">
+                    <h2>ラベル印刷</h2>
+                    <div class="label-actions">
+                        <button class="btn btn-primary" id="manage-label-settings-btn">ラベル設定管理</button>
+                        <button class="btn btn-success" id="print-labels-btn">選択した商品のラベルを印刷</button>
+                    </div>
+                    <div id="label-products-list" class="data-list"></div>
+                </div>
+            </main>
+        </div>
+
+        <div id="message-container"></div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
