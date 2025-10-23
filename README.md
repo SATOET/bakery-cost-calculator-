@@ -215,6 +215,7 @@ FastAPIの自動生成ドキュメントが利用可能です:
 
 - **[開発ガイド (CONTRIBUTING.md)](CONTRIBUTING.md)** - コーディング規約、開発ワークフロー
 - **[共同開発セットアップ (COLLABORATION_SETUP.md)](COLLABORATION_SETUP.md)** - コラボレーター追加、チーム開発の手順
+- **[VSCode共同作業ガイド (VSCODE_COLLABORATION.md)](VSCODE_COLLABORATION.md)** - VSCodeでのリアルタイム共同編集、GitHub統合
 
 ### クイックスタート（開発者向け）
 
