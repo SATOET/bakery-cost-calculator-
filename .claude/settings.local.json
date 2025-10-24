@@ -19,7 +19,9 @@
       "Bash(git remote add:*)",
       "Bash(git branch:*)",
       "Bash(git push:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git clone:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []
